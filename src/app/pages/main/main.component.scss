@@ -1,0 +1,43 @@
+.sidenav-content {
+  display: flex;
+  height: calc(100vh - 128px);
+  align-items: center;
+  justify-content: center;
+  padding-top: 64px;
+}
+
+.zindex2{
+  position: relative;
+  z-index: 2;
+}
+
+.text-white{
+  color: white;
+}
+
+.sidenav {
+  background-color: #0747A6;
+  color: white;
+}
+
+.active{
+  background-color:rgba(9, 30, 66, 0.25);
+}
+
+.sidenav-item{
+  color: white;
+  font-size:20px;
+}
+
+md-icon{
+  color: white;
+}
+
+.mat-drawer{
+  min-width: 1vw;
+}
+
+.button-pointer{
+  cursor: pointer;
+  margin-right: 10px;
+}

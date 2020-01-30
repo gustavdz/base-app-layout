@@ -1,0 +1,32 @@
+<mat-toolbar class="sidenav mat-elevation-z6 zindex2">
+  <mat-icon (click)="toogleSidenav()" class="button-pointer">menu</mat-icon>
+  <span>My App</span>
+</mat-toolbar>
+
+<mat-sidenav-container autosize>
+  <mat-sidenav #sidenav mode="side" class="sidenav"
+               [ngStyle]="{ 'width.em': sidenavWidth }"
+               [opened]="sidenavStatus">
+    <mat-nav-list>
+      <mat-list-item routerLink="home" routerLinkActive="active">
+        <mat-icon mat-list-icon class="text-white">home</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>Home</h5>
+        </div>
+      </mat-list-item>
+      <mat-list-item routerLink="about" routerLinkActive="active">
+        <mat-icon mat-list-icon class="text-white">face</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5>About</h5>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content">
+    <mat-card>
+      <router-outlet></router-outlet>
+    </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>
